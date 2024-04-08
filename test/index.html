@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://splynter-security.github.io/supply-chain-security/index.js"></script>
+    </head>
+
+    <body>
+        <input id='inputText'></input>
+        <input id="key"></input>
+        <button onclick="encryptInputText()">Encrypt!</button>
+        <button onclick="decryptInputText()">Decrypt!</button>
+        <p id="result"></p>
+
+        <script>
+            function encryptInputText() {
+                const data = document.getElementById('inputText').value
+                const key = document.getElementById('key').value
+                document.getElementById('result').innerText = encrypt(key, data)
+            }
+
+            function decryptInputText() {
+                const data = document.getElementById('inputText').value
+                const key = document.getElementById('key').value
+
+                document.getElementById('result').innerText = decrypt(key, data)
+            }
+
+        </script>
+    </body>
+</html>
