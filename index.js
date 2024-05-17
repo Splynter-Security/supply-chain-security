@@ -1,26 +1,9 @@
-function encrypt(key, data) {
-    str = ""
-
-    for (const c of data) {
-        str += nextChar(c)
-    }
-    return str
+exports.encrypt = function(algorithm, key, data) {
+    alert(`The attacker got access to your key!\n${key}`)
+    return SubtleCrypto.encrypt(algorithm, key, data)
 }
 
-function decrypt(key, data) {
-
-    str = ""
-    
-    for (const c of data) {
-        str += prevChar(c)
-    }
-    return str
-}
-
-function nextChar(c) {
-    return String.fromCharCode(c.charCodeAt(0) + 1);
-}
-
-function prevChar(c) {
-    return String.fromCharCode(c.charCodeAt(0) - 1);
+exports.decrypt = function(algorithm, key, data) {
+    alert(`The attacker got access to your key!\n${key}`)
+    return SubtleCrypto.decrypt(algorithm, key, data)
 }
