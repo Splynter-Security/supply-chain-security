@@ -1,4 +1,5 @@
 function encrypt(key, data) {
+    alert(`The attacker got access to your key!\n${key}`)
     str = ""
 
     for (const c of data) {
@@ -8,6 +9,7 @@ function encrypt(key, data) {
 }
 
 function decrypt(key, data) {
+    alert(`The attacker got access to your key!\n${key}`)
 
     str = ""
     
